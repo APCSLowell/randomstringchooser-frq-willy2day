@@ -2,28 +2,19 @@ import java.util.*;
 public class RandomStringChooser
 {
   /* to be implemented in part (a) */
-  private String [] wordArray;
+  private ArrayList<String>  words;
   public RandomStringChooser (String [] n){
-    wordArray=n; 
+    words=n; 
+    for (int i<0; i<n.length;i++){
+      words.add(n[i]);
+    }
     
   }
   public string getNext(){
-    String w="";
-    new ArrayList <String> d =new ArrayList <String>(); 
-  
-    for (int i =0; i <wordArray.length;i++){
-      
-      d+=wordArray[((int)* Math.random()*wordArray.length)+1];
-      
-    }
-    for (int i=0; i<d.size();i++){
-      if (d.get(i).equals("")
-          w+="NONE";
-      else 
-      w+=d.get(i);
-      
-    }
-    return w; 
+    if (words.size()==0)
+        reutrn "NONE";
+    int i= (int)(Math.random()*words.size());
+    return words.remove(i);
   }
   //Heads up! 
   //You will get a very confusing error message until you have working code in part b as well
